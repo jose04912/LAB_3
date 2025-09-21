@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toledo - Ciudad Imperial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(45deg, #8B4513, #D2691E);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://tse3.mm.bing.net/th/id/OIP.kkxm3hXKZmjGfAbLbdSf2QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        .description p {
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #8B4513;
+        }
+
+        .info-card h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .price-list, .attractions-list {
+            list-style: none;
+        }
+
+        .price-list li, .attractions-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-list li:last-child, .attractions-list li:last-child {
+            border-bottom: none;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #D2691E;
+        }
+
+        .image-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .main-image:hover {
+            transform: scale(1.02);
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #8B4513, #D2691E);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.4);
+            background: linear-gradient(45deg, #A0522D, #FF8C00);
+        }
+
+        .stay-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .stay-info h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Toledo</h1>
+                <p>La Ciudad Imperial de las Tres Culturas</p>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <div class="description">
+                <p>Toledo, conocida como la "Ciudad Imperial" y declarada Patrimonio de la Humanidad por la UNESCO, es una joya histórica que se alza majestuosamente sobre el río Tajo. Esta antigua capital de España es un museo viviente donde confluyen las culturas cristiana, judía y musulmana, creando un legado arquitectónico y cultural único en el mundo.</p>
+                
+                <p>Caminar por sus calles empedradas es como viajar en el tiempo. Cada rincón cuenta una historia milenaria: desde la imponente Catedral Primada hasta el misterioso Barrio Judío, pasando por las magníficas sinagogas y mezquitas que testimonian la convivencia de las tres religiones. Toledo también fue hogar del genial pintor El Greco, cuyas obras aún pueden admirarse en varios museos de la ciudad.</p>
+
+                <p>La ciudad ofrece una experiencia única que combina historia, arte, gastronomía y artesanía tradicional. Sus famosas espadas toledanas, el mazapán y los damasquinados son solo algunas de las tradiciones que perduran hasta nuestros días, convirtiendo cada visita en un encuentro inolvidable con la herencia cultural española.</p>
+            </div>
+        </section>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🎫 Precios de Entrada</h3>
+                <ul class="price-list">
+                    <li><span>Catedral Primada</span> <span class="price">€12</span></li>
+                    <li><span>Alcázar de Toledo</span> <span class="price">€5</span></li>
+                    <li><span>Sinagoga del Tránsito</span> <span class="price">€3</span></li>
+                    <li><span>Museo del Greco</span> <span class="price">€3</span></li>
+                    <li><span>Sinagoga de Santa María la Blanca</span> <span class="price">€3</span></li>
+                    <li><span>Mezquita del Cristo de la Luz</span> <span class="price">€3</span></li>
+                    <li><span>Tour completo guiado</span> <span class="price">€25</span></li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>📍 Sitios Imprescindibles</h3>
+                <ul class="attractions-list">
+                    <li><span>🏰 Alcázar de Toledo</span></li>
+                    <li><span>⛪ Catedral Primada</span></li>
+                    <li><span>🕍 Barrio Judío</span></li>
+                    <li><span>🎨 Casa-Museo del Greco</span></li>
+                    <li><span>🌉 Puente de San Martín</span></li>
+                    <li><span>🏛️ Monasterio de San Juan de los Reyes</span></li>
+                    <li><span>🗡️ Talleres de espadas toledanas</span></li>
+                    <li><span>👁️ Mirador del Valle</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stay-info">
+            <h4>⏰ Tiempo de Estadía Recomendado</h4>
+            <p><strong>2-3 días</strong> para explorar completamente la ciudad histórica, museos y alrededores</p>
+            <p><em>Mínimo 1 día para los sitios principales</em></p>
+        </div>
+
+        <section class="content-section image-section">
+            <h3 style="margin-bottom: 1rem; color: #8B4513;">Vista Panorámica de Toledo</h3>
+            <img src="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2019/09/toledo-espanha-253926271.jpg" 
+                 alt="Vista panorámica de Toledo" 
+                 class="main-image">
+        </section>
+
+        <section class="content-section video-section">
+            <h3 style="margin-bottom: 1rem; color: #8B4513;">Descubre Toledo en Video</h3>
+            <div class="video-container">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/hrVewBx9oxM?si=iGDuE8h4Sl0jVwBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">🏠 Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>
