@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marsaxlokk, Malta</title>
+    <!-- Incluir Tailwind CSS desde CDN para un diseño responsivo y moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        
+        /* Estilos para el efecto de volteo de tarjeta */
+        .flip-card-container {
+            perspective: 1000px;
+            height: 150px;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card-container:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Oculta la parte trasera al voltear */
+            backface-visibility: hidden;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .flip-card-front {
+            background-color: #fff;
+            color: #1a202c;
+        }
+        
+        .flip-card-back {
+            background-color: #3b82f6;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Contenedor principal para centrar el contenido -->
+    <div class="container mx-auto p-4 md:p-8 lg:p-12">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Marsaxlokk, Malta</h1>
+            <p class="text-lg text-gray-600">El encantador pueblo pesquero del sur</p>
+        </header>
+
+        <!-- Sección de la descripción -->
+        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Un Paraíso de Pescadores</h2>
+            <p class="text-base leading-relaxed mb-4 text-justify">
+                Marsaxlokk es un pintoresco y vibrante pueblo pesquero situado en la parte sureste de Malta. Es famoso por su puerto lleno de "luzzus", las tradicionales embarcaciones de pesca maltesas pintadas con colores vivos (rojo, amarillo y azul) y con un par de ojos en la proa, que se cree que protegen a los pescadores de los malos espíritus. El ambiente del lugar es inigualable, con el ajetreo de los pescadores que reparan sus redes y el olor a sal y marisco fresco que impregna el aire.
+            </p>
+            <p class="text-base leading-relaxed text-justify">
+                Además de su belleza natural, Marsaxlokk es un destino gastronómico de primer nivel, especialmente para los amantes del pescado y el marisco. Los restaurantes a lo largo del paseo marítimo sirven las capturas más frescas del día, directamente de las barcas a la mesa. El famoso mercado de pescado que se celebra los domingos atrae a visitantes de toda la isla, ofreciendo no solo marisco, sino también productos locales, artesanía y recuerdos únicos.
+            </p>
+        </section>
+
+        <!-- Sección de imagen y video -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-md p-4">
+                <h3 class="text-xl font-semibold mb-2">Imagen Representativa</h3>
+                <img src="https://placehold.co/600x400/87CEEB/ffffff?text=Marsaxlokk" alt="Representación de Marsaxlokk" class="w-full rounded-lg shadow-sm">
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-4">
+                <h3 class="text-xl font-semibold mb-2">Video de Marsaxlokk</h3>
+                <div class="relative w-full aspect-video">
+                    <iframe 
+                        src="https://www.youtube.com/embed/55hQjK5L2R4" 
+                        title="YouTube video player sobre Marsaxlokk" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen 
+                        class="absolute top-0 left-0 w-full h-full rounded-lg">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de sitios y precios con tarjetas animadas -->
+        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Sitios a Visitar y Precios Estimados</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Tarjeta 1: Paseo por el Puerto -->
+                <div class="flip-card-container">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h4 class="text-lg font-bold mb-2">Paseo por el Puerto</h4>
+                            <p class="text-sm">Gratuito. Es la mejor forma de apreciar la belleza de los luzzus.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-lg font-bold mb-2">Paseo por el Puerto</h4>
+                            <p class="text-sm">Disfruta de la brisa marina y las vistas panorámicas de las coloridas barcas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Mercado Dominical -->
+                <div class="flip-card-container">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h4 class="text-lg font-bold mb-2">Mercado Dominical</h4>
+                            <p class="text-sm">Gratuito para visitar. Los precios varían (desde 5€).</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-lg font-bold mb-2">Mercado Dominical</h4>
+                            <p class="text-sm">Encuentra el pescado más fresco de la isla y productos locales únicos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Almuerzo en Restaurante -->
+                <div class="flip-card-container">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h4 class="text-lg font-bold mb-2">Almuerzo en Restaurante</h4>
+                            <p class="text-sm">25€ - 50€ por persona, dependiendo del lugar y la selección de platos.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-lg font-bold mb-2">Almuerzo en Restaurante</h4>
+                            <p class="text-sm">Prueba el marisco local en un ambiente auténtico y con vistas al puerto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Excursión en Barco -->
+                <div class="flip-card-container">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h4 class="text-lg font-bold mb-2">Excursión en Barco</h4>
+                            <p class="text-sm">10€ - 20€ por persona. Se pueden contratar botes locales para tours.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-lg font-bold mb-2">Excursión en Barco</h4>
+                            <p class="text-sm">Descubre la belleza de la Gruta Azul y sus aguas cristalinas desde el mar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de tiempo de estadía -->
+        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Tiempo de Estadía Recomendado</h2>
+            <p class="text-base leading-relaxed">
+                Para explorar Marsaxlokk a fondo y disfrutar de su mercado y su gastronomía, se recomienda una visita de al menos un día completo. Si planeas visitar otras atracciones cercanas como la Gruta Azul o las piscinas naturales de St. Peter's Pool, podrías necesitar un segundo día.
+            </p>
+        </section>
+
+        <!-- Enlace para volver a la página principal -->
+        <footer class="text-center mt-8">
+            <a href="index.html" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
+                Volver a la página principal
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
