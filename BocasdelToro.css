@@ -1,0 +1,77 @@
+/* Colores representativos de Bocas del Toro, Panamá */
+:root {
+  --azul-marino: #1e4a7a;    /* Representa el mar Caribe */
+  --verde-tropical: #2e8b57;  /* Representa la vegetación tropical */
+  --arena-dorada: #e6c9a8;    /* Representa las playas de arena */
+  --turquesa: #40e0d0;        /* Representa las aguas cristalinas */
+  --blanco: #ffffff;
+  --texto-oscuro: #003366;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  /* Fondo con degradado que representa el mar y la arena */
+  background: linear-gradient(135deg, var(--arena-dorada), var(--turquesa));
+  color: var(--texto-oscuro);
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+a {
+  color: var(--azul-marino);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--verde-tropical);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: 2px solid var(--turquesa);
+}
+
+video {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+ul {
+  list-style-type: square;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--verde-tropical);
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h3 {
+  color: var(--azul-marino);
+  border-bottom: 2px solid var(--turquesa);
+  padding-bottom: 5px;
+}
