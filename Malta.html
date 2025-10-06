@@ -1,121 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marsaxlokk, Malta</title>
-    <!-- Tailwind CSS desde CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace al archivo CSS externo -->
-    <link rel="stylesheet" href="malta.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marsaxlokk, Malta</title>
+  <link rel="stylesheet" href="malta.css" />
 </head>
-<body class="text-gray-800">
-    <div class="container mx-auto p-4 md:p-8 lg:p-12">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Marsaxlokk, Malta</h1>
-            <p class="text-lg text-gray-600">El encantador pueblo pesquero del sur</p>
-        </header>
-
-        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Un Paraíso de Pescadores</h2>
-            <p class="text-base leading-relaxed mb-4 text-justify">
-                Marsaxlokk es un pintoresco y vibrante pueblo pesquero situado en la parte sureste de Malta...
-            </p>
-            <p class="text-base leading-relaxed text-justify">
-                Además de su belleza natural, Marsaxlokk es un destino gastronómico de primer nivel...
-            </p>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white rounded-xl shadow-md p-4">
-                <h3 class="text-xl font-semibold mb-2">Imagen Representativa</h3>
-                <img src="https://visitarmalta.com/wp-content/uploads/2019/12/640px-Malta_-_Marsaxlokk_-_Xatt_is-Sajjieda_-_Harbour_14_ies.jpg" alt="Representación de Marsaxlokk" class="w-full rounded-lg shadow-sm">
-            </div>
-            <div class="bg-white rounded-xl shadow-md p-4">
-                <h3 class="text-xl font-semibold mb-2">Video de Marsaxlokk</h3>
-                <div class="w-full aspect-video overflow-hidden rounded-lg shadow-sm">
-                    <iframe 
-                        class="w-full h-full"
-                        src="https://www.youtube.com/embed/P56vpTKWN48?si=tSQkCclAAfEjZmZQ" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Sitios a Visitar y Precios Estimados</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="flip-card-container">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4 class="text-lg font-bold mb-2">Paseo por el Puerto</h4>
-                            <p class="text-sm">Gratuito. Es la mejor forma de apreciar la belleza de los luzzus.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h4 class="text-lg font-bold mb-2">Paseo por el Puerto</h4>
-                            <p class="text-sm">Disfruta de la brisa marina y las vistas panorámicas de las coloridas barcas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card-container">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4 class="text-lg font-bold mb-2">Mercado Dominical</h4>
-                            <p class="text-sm">Gratuito para visitar. Los precios varían (desde 5€).</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h4 class="text-lg font-bold mb-2">Mercado Dominical</h4>
-                            <p class="text-sm">Encuentra el pescado más fresco de la isla y productos locales únicos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card-container">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4 class="text-lg font-bold mb-2">Almuerzo en Restaurante</h4>
-                            <p class="text-sm">25€ - 50€ por persona, dependiendo del lugar y la selección de platos.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h4 class="text-lg font-bold mb-2">Almuerzo en Restaurante</h4>
-                            <p class="text-sm">Prueba el marisco local en un ambiente auténtico y con vistas al puerto.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card-container">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4 class="text-lg font-bold mb-2">Excursión en Barco</h4>
-                            <p class="text-sm">10€ - 20€ por persona. Se pueden contratar botes locales para tours.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h4 class="text-lg font-bold mb-2">Excursión en Barco</h4>
-                            <p class="text-sm">Descubre la belleza de la Gruta Azul y sus aguas cristalinas desde el mar.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Tiempo de Estadía Recomendado</h2>
-            <p class="text-base leading-relaxed">
-                Para explorar Marsaxlokk a fondo y disfrutar de su mercado y su gastronomía, se recomienda una visita de al menos un día completo...
-            </p>
-        </section>
-
-        <footer class="text-center mt-8">
-            <a href="index.html" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
-                Volver a la página principal
-            </a>
-        </footer>
+<body>
+  <header id="encabezado-principal">
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Marsaxlokk, Malta</h1>
+      <p>El encantador pueblo pesquero del sur</p>
     </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="seccion fondo-claro">
+      <h2>Un Paraíso de Pescadores</h2>
+      <p>
+        Marsaxlokk es un pintoresco pueblo pesquero famoso por sus luzzus
+        coloridos y su ambiente marítimo auténtico.
+      </p>
+    </section>
+
+    <section id="destinos" class="seccion columnas">
+      <div class="columna">
+        <h3>Imagen Representativa</h3>
+        <img src="https://visitarmalta.com/wp-content/uploads/2019/12/640px-Malta_-_Marsaxlokk_-_Xatt_is-Sajjieda_-_Harbour_14_ies.jpg" alt="Marsaxlokk" />
+      </div>
+      <div class="columna" id="video">
+        <h3>Video de Marsaxlokk</h3>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/P56vpTKWN48?si=tSQkCclAAfEjZmZQ"
+            title="YouTube video player"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion fondo-azul">
+      <h2>Sitios a Visitar y Precios Estimados</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h4>Paseo por el Puerto</h4>
+          <p>Gratuito. Es la mejor forma de apreciar la belleza de los luzzus.</p>
+        </div>
+        <div class="tarjeta">
+          <h4>Mercado Dominical</h4>
+          <p>Gratuito para visitar. Los precios varían (desde 5€).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion fondo-claro">
+      <h2>Tiempo de Estadía Recomendado</h2>
+      <p>
+        Se recomienda al menos un día completo para disfrutar del mercado y la
+        gastronomía local.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>© 2025 Agencia de Viajes Virtual</p>
+    <a href="index.html">Volver a la página principal</a>
+  </footer>
 </body>
 </html>
