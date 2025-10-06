@@ -1,77 +1,159 @@
-/* Colores representativos de Bocas del Toro, Panamá */
+/* Colores verde y amarillo para Bocas del Toro */
 :root {
-  --azul-marino: #1e4a7a;    /* Representa el mar Caribe */
-  --verde-tropical: #2e8b57;  /* Representa la vegetación tropical */
-  --arena-dorada: #e6c9a8;    /* Representa las playas de arena */
-  --turquesa: #40e0d0;        /* Representa las aguas cristalinas */
+  --verde-principal: #2e8b57;    /* Verde principal */
+  --verde-oscuro: #1e6b3a;       /* Verde oscuro para contraste */
+  --amarillo-principal: #ffd700; /* Amarillo dorado */
+  --amarillo-claro: #fff9c4;     /* Amarillo claro para fondos */
   --blanco: #ffffff;
-  --texto-oscuro: #003366;
+  --texto-oscuro: #1a331a;
+  --sombra: rgba(0, 0, 0, 0.1);
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
-  /* Fondo con degradado que representa el mar y la arena */
-  background: linear-gradient(135deg, var(--arena-dorada), var(--turquesa));
+  /* Fondo con degradado verde y amarillo */
+  background: linear-gradient(135deg, var(--amarillo-claro), var(--verde-principal));
   color: var(--texto-oscuro);
   min-height: 100vh;
   margin: 0;
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--azul-marino);
+  background: linear-gradient(135deg, var(--verde-principal), var(--verde-oscuro));
   color: var(--blanco);
-  padding: 15px;
+  padding: 25px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 a {
-  color: var(--azul-marino);
+  color: var(--verde-oscuro);
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--verde-tropical);
+  color: var(--amarillo-principal);
   text-decoration: underline;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border: 2px solid var(--turquesa);
+/* Sección de introducción */
+.introduccion {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  border-left: 5px solid var(--amarillo-principal);
 }
 
-video {
-  max-width: 100%;
+.introduccion p {
   margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: justify;
+}
+
+/* Sección de imagen */
+.seccion-imagen {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  text-align: center;
+  border-left: 5px solid var(--verde-principal);
+}
+
+.seccion-imagen img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 3px solid var(--amarillo-principal);
+  transition: transform 0.3s ease;
+}
+
+.seccion-imagen img:hover {
+  transform: scale(1.02);
+}
+
+/* Sección de video */
+.seccion-video {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  text-align: center;
+  border-left: 5px solid var(--verde-oscuro);
+}
+
+.seccion-video iframe {
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 3px solid var(--verde-principal);
+}
+
+/* Sección de enlace de regreso */
+.regreso {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+h3 {
+  color: var(--verde-oscuro);
+  border-bottom: 2px solid var(--amarillo-principal);
+  padding-bottom: 8px;
+  margin-top: 25px;
 }
 
 ul {
   list-style-type: square;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--verde-tropical);
-}
-
-section {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 249, 196, 0.5);
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--verde-principal);
 }
 
-h3 {
-  color: var(--azul-marino);
+li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .seccion-imagen img {
+    max-width: 100%;
+  }
+  
+  .seccion-video iframe {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+}marino);
   border-bottom: 2px solid var(--turquesa);
   padding-bottom: 5px;
 }
